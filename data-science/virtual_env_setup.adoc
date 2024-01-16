@@ -1,0 +1,61 @@
+= Data Science Environment Setup in Ubuntu
+
+This guide will help you setup a Python virtual environment for your data science project in Ubuntu.
+
+== Prerequisites
+
+* Ubuntu 20.04 or later
+* Python 3.6 or later
+
+== Procedure
+
+Follow these steps:
+
+. Ensure Python's venv is installed. If it is not, install it using:
+
+----
+sudo apt-get install python3-venv
+----
+
+. Navigate to your project directory:
+
+----
+cd /path/to/your/project
+----
+
+Replace `/path/to/your/project` with the actual path to your project.
+
+. Create a virtual environment named `Data_Science`:
+
+----
+python3 -m venv Data_Science
+----
+
+. Activate the virtual environment:
+
+----
+source Data_Science/bin/activate
+----
+
+. Install the necessary Python packages:
+
+----
+pip install numpy pandas matplotlib seaborn scikit-learn torch torchvision tensorflow gym==0.17.3
+
+----
+
+. Verify the installed packages:
+
+----
+pip list
+----
+
+You should see the installed packages in the output.
+
+. When finished, you can deactivate the environment:
+
+----
+deactivate
+----
+
+NOTE: Remember to activate the `Data_Science` environment whenever you work on your project.
